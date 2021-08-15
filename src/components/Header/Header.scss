@@ -1,0 +1,51 @@
+@import '../../layout/layout.scss';
+
+.Header {
+  height: 60px;
+  width: 100%;
+  color: $white;
+
+  .Header_unauthorized {
+    height: 100%;
+    background: $white;
+    box-shadow: 0px 4px 10px rgba(36, 36, 70, 0.1);
+  }
+
+  .Header_authorized {
+    height: 100%;
+    background: $blue-600;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+    .Container {
+      justify-content: flex-end;
+    }
+
+    .Btn_logout {
+      font-size: 12px;
+      line-height: 24px;
+      text-align: right;
+      text-transform: capitalize;
+      color: $white;
+      transition-duration: 0.15s;
+      cursor: pointer;
+
+      &:hover {
+        color: $blue-300;
+      }
+    }
+  }
+
+  .Container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .Header__logo {
+    height: 31px;
+
+    @include breakpoint($sm) {
+      height: 25px;
+    }
+  }
+}

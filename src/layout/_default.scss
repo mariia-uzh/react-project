@@ -1,0 +1,112 @@
+@import './layout.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    position: relative;
+    font-family: $default-font-family !important;
+    font-size: $default-font-size;
+    line-height: $default-line-height;
+    font-style: $default-font-style;
+    font-weight: $default-font-weight;
+    color: $default-color;
+    background-color: $default-bg;
+
+    @include breakpoint($lg) {
+        font-size: 20px;
+    }
+
+    @include breakpoint($sm) {
+        font-size: 16px;
+    }
+}
+
+.Layout {
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.Container {
+    position: relative;
+    max-width: 1680px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include breakpoint($lg) {
+        max-width: 960px;
+    }
+
+    @include breakpoint($md) {
+        max-width: 720px;
+    }
+
+    @include breakpoint($sm) {
+        max-width: 540px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+    @include breakpoint($xs) {
+        max-width: 100%;
+    }
+}
+
+.Container__wrapper {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 110px;
+    padding-right: 45px;
+    transition-duration: .3s;
+
+    &.is-opened {
+        padding-left: 235px;
+
+        @include breakpoint($sm) {
+            padding-left: 0;
+        }
+    }
+
+    @include breakpoint($sm) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+button {
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+        outline: none; 
+    }
+}

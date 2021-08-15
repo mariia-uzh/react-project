@@ -1,0 +1,15 @@
+@import '../../layout/layout.scss';
+
+.LogInSection {
+  margin: 40px auto 60px;
+  max-width: 255px;
+  text-align: center;
+
+  .LogInSection__img {
+    max-height: 194px;
+  }
+
+  .Btn__wrapper {
+    margin-top: 25px;
+  }
+}

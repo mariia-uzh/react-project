@@ -1,0 +1,73 @@
+@import '../../layout/layout.scss';
+
+input, textarea, select {
+  display: block;
+  width: 100%;
+  font-family: $default-font-family;
+  border: 1px solid $gray-400;
+  border-radius: 5px;
+  padding: 6px 8px 6px 10px;
+  height: auto;
+  min-height: 38px;
+  font-size: 14px;
+  line-height: 24px;
+
+  &:focus {
+    border-color: $blue-600;
+    box-shadow: 0 0 0 0.2rem rgba($blue,.25)
+  }
+
+  &:active, &:focus {
+    outline: none;
+    background-color: $white;
+  }
+
+  &.invalid {
+    border-color: $pink;
+  }
+
+  @include placeholder {
+    color: $gray-500;
+  }
+
+  @include breakpoint($sm) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+label {
+  position: relative;
+  font-size: 14px;
+  line-height: 14px;
+  width: 100%;
+  cursor: pointer;
+
+  input {
+    margin-top: 10px;
+  }
+}
+
+.Invalid-messege {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  font-size: 10px;
+  line-height: 14px;
+  color: $pink;
+}
+
+.Input__row {
+  margin-bottom: 0;
+  text-align: left;
+
+  &:first-child {
+    margin-top: 14px;
+  }
+}
+
+option {
+  font-size: 14px;
+  line-height: 24px;
+}

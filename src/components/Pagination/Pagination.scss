@@ -1,0 +1,124 @@
+@import '../../layout/layout.scss';
+
+.Pagination {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 16px 15px 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+
+    @include breakpoint($md) {
+        justify-content: center;
+    }
+
+    .PageItem {
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: $default-border-radius;
+        transition-duration: .15s;
+
+        &.active {
+
+            .PageLink {
+                z-index: 1;
+                color: $white;
+                background-color: $blue;
+                border-color: $blue;
+                
+                &:focus {
+                    box-shadow: 0 0 0 0.2rem rgba($blue, .5)
+                }
+            }
+        }
+
+        &.disabled {
+
+            .PageLink {
+                color: rgba($gray-500, 0.9);
+                pointer-events: none;
+                background-color: $white;
+                border-color: $gray-300;
+                cursor: default;
+            }
+        }
+        
+        &.hidden {
+            display: none;
+        }
+
+        &.d-none-md {
+
+            @include breakpoint($md) {
+                display: none;
+            }
+        }
+
+        &.d-none-sm {
+
+            @include breakpoint($sm) {
+                display: none;
+            }
+        }
+
+        .PageLink {
+            position: relative;
+            display: block;
+            padding: 4px 7px 3px;
+            font-size: 14px;
+            line-height: 15px;
+            color: $gray-500;
+            background-color: $white;
+            border-radius: $default-border-radius;
+            transition-duration: .15s;
+            cursor: pointer;
+
+            &:hover {
+                z-index: 2;
+                color: $blue-500;
+                text-decoration: none;
+                background-color: $gray-400;
+                border-color: $gray-300;
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 0.2rem rgba($gray-450, .5)
+            }
+        }
+
+        .PageLink_prev {
+            padding-left: 30px;
+            
+            .icon {
+                left: 5px;
+            }
+        }
+        
+        .PageLink_next {
+            padding-right: 30px;
+            
+            .icon {
+                right: 5px;
+            }
+        }
+    }
+    
+    .PageItem_number{
+        box-shadow: 0px 0px 20px rgba($black, 0.1);
+
+        &.active {
+            box-shadow: 0px 0px 20px rgba($blue, 0.1);
+        }
+    } 
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.Pagination__wrapper {
+    display: block;
+}

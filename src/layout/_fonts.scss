@@ -1,0 +1,17 @@
+// ############ Fonts ############
+
+@mixin font-face ($name, $file-name, $font-weight: 400, $font-style: normal) {
+    @font-face {
+        font-family: $name;
+        src: url('./../fonts/#{$file-name}.woff2') format('woff2'),
+            url('./../fonts/#{$file-name}.woff') format('woff');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}
+
+$avenir:         'Avenir';
+@include font-face($avenir, 'Avenir-Roman');
+$font-primary:      $avenir, sans-serif;
+
+@import "./../fonts/icomoon/style.scss";

@@ -1,0 +1,119 @@
+@import '../../layout/layout.scss';
+
+.Modal__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity .15s linear;
+
+  @include breakpoint($md) {
+    padding-left: 15px;
+    padding-right: 30px;
+  }
+}
+
+.Modal__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: .5;
+}
+
+.Modal {
+  position: relative;
+  width: 100%;
+  border: 0;
+  background-color: $white;
+  box-shadow: 0 0 20px rgba($black,.1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+
+  &.Modal_lg {
+    max-width: 600px;
+
+    .Input__row {
+      display: flex;
+      justify-content: space-between;
+
+      @include breakpoint($md) {
+        flex-wrap: wrap;
+      }
+    }
+
+    label {
+      max-width: 255px;
+
+      @include breakpoint($md) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .Modal__heading {
+    @extend %flex-center;
+    position: relative;
+    padding: 11px;
+    padding-right: 40px;
+    background: linear-gradient(53.68deg, $blue 0, rgba(3, 100, 255, 0.3) 100%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    .Modal__title {
+      font-size: 14px;
+      line-height: 16px;
+      color: $white;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-right: -20px;
+    }
+  }
+
+  .Modal__icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: $white;
+    opacity: .5;
+    display: inline-block;
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .75;
+    }
+  }
+
+  .Modal__content {
+    padding: 10px 30px 40px;
+    
+    &.center {
+      text-align: center;
+
+      .Input__row {
+        max-width: 268px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .Btn__wrapper {
+    text-align: center;
+    margin-top: 10px;
+  }
+}

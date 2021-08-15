@@ -1,0 +1,75 @@
+{
+  "status": 200,
+  "redirectedIPs": [
+    {
+      "ipFrom":       "192.168.0.1",
+      "ipTo":         "192.168.255.255",
+      "countryCode":  "NO",
+      "country":      "Norway",
+      "region":       "Shimane",
+      "city":         "Izumo",
+      "latitude":     "35.367000",
+      "longitude":     "132.767000",
+      "zipCode":      "693-0044",
+      "ISP":          "Energia Communications Inc.",
+      "domain":       "enecom.co.jp"
+    },
+    {
+      "ipFrom":       "192.168.0.1",
+      "ipTo":         "192.168.255.255",
+      "countryCode":  "JP",
+      "country":      "Japan",
+      "region":       "Shimane",
+      "city":         "Izumo",
+      "latitude":     "35.367000",
+      "longitude":     "132.767000",
+      "zipCode":      "693-0044",
+      "ISP":          "Energia Communications Inc.",
+      "domain":       "enecom.co.jp"
+    },
+    {
+      "ipFrom":       "192.168.0.1",
+      "ipTo":         "192.168.255.255",
+      "countryCode":  "GR",
+      "country":      "Greece",
+      "region":       "Shimane",
+      "city":         "Izumo",
+      "latitude":     "35.367000",
+      "longitude":     "132.767000",
+      "zipCode":      "693-0044",
+      "ISP":          "Energia Communications Inc.",
+      "domain":       "enecom.co.jp"
+    },
+    {
+      "ipFrom":       "192.168.0.1",
+      "ipTo":         "192.168.255.255",
+      "countryCode":  "UK",
+      "country":      "United Kingdom",
+      "region":       "Shimane",
+      "city":         "Izumo",
+      "latitude":     "35.367000",
+      "longitude":     "132.767000",
+      "zipCode":      "693-0044",
+      "ISP":          "Energia Communications Inc.",
+      "domain":       "enecom.co.jp"
+    },
+    {
+      "ipFrom":       "192.168.0.1",
+      "ipTo":         "192.168.255.255",
+      "countryCode":  "ES",
+      "country":      "Spain",
+      "region":       "Shimane",
+      "city":         "Izumo",
+      "latitude":     "35.367000",
+      "longitude":     "132.767000",
+      "zipCode":      "693-0044",
+      "ISP":          "Energia Communications Inc.",
+      "domain":       "enecom.co.jp"
+    }
+  ],
+  "pagination": 
+  {
+    "total":          100,
+    "per_page":       10
+  }
+}

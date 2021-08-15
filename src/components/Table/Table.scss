@@ -1,0 +1,90 @@
+@import '../../layout/layout.scss';
+
+.Table__wrapper {
+    background: $white;
+    box-shadow: 0 0 20px rgba($blue-600,.1);
+    border-radius: 5px;
+    padding-bottom: 16px;
+    margin-top: 10px;
+}
+
+.Table__overflow {
+    overflow-x: auto;
+    margin: 0;
+}
+
+.Table {
+    display: table;
+    margin-top: -1px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 16px;
+    border-spacing: 0;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    @include breakpoint($md) {
+        font-size: 12px;
+    }
+}
+
+.TableRow {
+    border-bottom: 1px solid rgba($gray-400, 0.5);
+    transition: all .15s;
+
+    &:hover {
+        background: $gray-400;
+    }
+
+    &.TableHeading {
+        background: linear-gradient(53.68deg,$blue 0,rgba(3,100,255,.3) 100%);
+        color: $white;
+        font-weight: 700;
+        letter-spacing: .8px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom: 0;
+
+        .TableCol {
+            padding: 11px 12px;
+            height: auto;
+            text-align: left;
+
+            &:first-child {
+                padding-left: 35px;
+                border-top-left-radius: $default-border-radius;
+            }
+
+            &:last-child {
+                padding-right: 20px;
+                border-top-right-radius: $default-border-radius;
+            }
+        }
+    }
+}
+
+.TableCol {
+    display: table-cell;
+    height: 58px;
+    padding: 10px 12px;
+    vertical-align: middle;
+    border: 0;
+
+    &:first-child {
+        padding-left: 35px;
+
+        @include breakpoint($xs) {
+            padding-left: 20px;
+        }
+    }
+
+    &:last-child {
+        padding-right: 20px;
+    } 
+
+    &.TableCol_sm {
+        max-width: 65px;
+    }
+}
+
